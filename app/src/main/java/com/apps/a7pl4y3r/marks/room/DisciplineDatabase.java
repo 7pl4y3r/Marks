@@ -18,7 +18,7 @@ public abstract class DisciplineDatabase extends RoomDatabase {
 
     public abstract DisciplineDao dao();
 
-    public DisciplineDatabase getInstance(Context context) {
+    public static DisciplineDatabase getInstance(Context context) {
 
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(), DisciplineDatabase.class, Data.disciplineDatabaseName)
