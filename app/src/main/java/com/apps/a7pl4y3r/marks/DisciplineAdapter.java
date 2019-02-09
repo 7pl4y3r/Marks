@@ -57,6 +57,10 @@ public class DisciplineAdapter extends ListAdapter<Discipline, DisciplineAdapter
     }
 
 
+    public Discipline getDisciplineAt(int position) {
+        return getItem(position);
+    }
+
     public class DisciplineHolder extends RecyclerView.ViewHolder {
 
         private View view;

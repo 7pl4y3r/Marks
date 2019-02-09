@@ -10,24 +10,18 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 @Dao
-public abstract class MarkDao {
-
-    private String databaseName;
-
-    public MarkDao(String databaseName) {
-        this.databaseName = databaseName;
-    }
+public interface MarkDao {
 
     @Insert
-    public abstract void insert(Mark mark);
+    void insert(Mark mark);
 
     @Update
-    public abstract void update(Mark mark);
+    void update(Mark mark);
 
     @Delete
-    public abstract void delete(Mark mark);
+    void delete(Mark mark);
 
-    @Query("SELECT * FROM `marks.db` ORDER BY title ASC")
-    public abstract LiveData<List<Mark>> getMarks();
+    @Query("SELECT * FROM `marks.db`")
+    LiveData<List<Mark>> getMarks();
 
 }

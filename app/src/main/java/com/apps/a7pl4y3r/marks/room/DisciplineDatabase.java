@@ -21,9 +21,9 @@ public abstract class DisciplineDatabase extends RoomDatabase {
     public static DisciplineDatabase getInstance(Context context) {
 
         if (instance == null) {
+
             instance = Room.databaseBuilder(context.getApplicationContext(), DisciplineDatabase.class, Data.disciplineDatabaseName)
                     .fallbackToDestructiveMigration()
-                    .addCallback(roomCallBack)
                     .build();
         }
 
@@ -31,7 +31,7 @@ public abstract class DisciplineDatabase extends RoomDatabase {
 
     }
 
-    private static RoomDatabase.Callback roomCallBack = new RoomDatabase.Callback() {
+    /*private static RoomDatabase.Callback roomCallBack = new RoomDatabase.Callback() {
 
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -55,6 +55,6 @@ public abstract class DisciplineDatabase extends RoomDatabase {
             dao.insert(new Discipline("No disciplines", "press the fab to add one"));
             return null;
         }
-    }
+    }*/
 
 }
