@@ -13,6 +13,7 @@ import com.apps.a7pl4y3r.marks.R;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class EditDiscipline extends AppCompatActivity {
 
@@ -20,6 +21,8 @@ public class EditDiscipline extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discipline_editor);
+        Toolbar toolbar = findViewById(R.id.toolbar_editor);
+        setSupportActionBar(toolbar);
 
     }
 
